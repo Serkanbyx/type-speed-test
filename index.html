@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type Speed Test - Yazma Hızı Testi</title>
+    <meta
+      name="description"
+      content="Yazma hızınızı ve doğruluğunuzu test edin. WPM (words per minute) hesaplama ve detaylı istatistikler."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <h1>⚡ Type Speed Test</h1>
+        <p class="subtitle">Yazma hızınızı ve doğruluğunuzu test edin</p>
+      </header>
+
+      <!-- Difficulty Selection -->
+      <div class="difficulty-section" id="difficultySection">
+        <h2>Zorluk Seviyesi Seçin</h2>
+        <div class="difficulty-buttons">
+          <button class="difficulty-btn" data-level="easy">
+            <span class="difficulty-icon">🟢</span>
+            <span class="difficulty-name">Kolay</span>
+            <span class="difficulty-desc">Kısa ve basit cümleler</span>
+          </button>
+          <button class="difficulty-btn" data-level="medium">
+            <span class="difficulty-icon">🟡</span>
+            <span class="difficulty-name">Orta</span>
+            <span class="difficulty-desc">Normal uzunlukta metinler</span>
+          </button>
+          <button class="difficulty-btn" data-level="hard">
+            <span class="difficulty-icon">🔴</span>
+            <span class="difficulty-name">Zor</span>
+            <span class="difficulty-desc">Uzun ve karmaşık cümleler</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Game Section -->
+      <div class="game-section hidden" id="gameSection">
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+          <div class="stat-item">
+            <span class="stat-label">Süre</span>
+            <span class="stat-value" id="timer">60</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">WPM</span>
+            <span class="stat-value" id="wpm">0</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Doğruluk</span>
+            <span class="stat-value" id="accuracy">100%</span>
+          </div>
+        </div>
+
+        <!-- Text Display -->
+        <div class="text-display" id="textDisplay">
+          <!-- Text will be rendered here dynamically -->
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-section">
+          <textarea
+            id="textInput"
+            class="text-input"
+            placeholder="Yazmaya başlamak için buraya tıklayın..."
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            spellcheck="false"
+          ></textarea>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+          <button class="btn btn-secondary" id="restartBtn">
+            🔄 Yeniden Başla
+          </button>
+          <button class="btn btn-secondary" id="changeLevelBtn">
+            📊 Seviye Değiştir
+          </button>
+        </div>
+      </div>
+
+      <!-- Results Section -->
+      <div class="results-section hidden" id="resultsSection">
+        <div class="results-card">
+          <h2>🎉 Test Tamamlandı!</h2>
+          <div class="results-stats">
+            <div class="result-item">
+              <span class="result-icon">⚡</span>
+              <div class="result-content">
+                <span class="result-label">Yazma Hızı</span>
+                <span class="result-value" id="finalWpm">0</span>
+                <span class="result-unit">WPM</span>
+              </div>
+            </div>
+            <div class="result-item">
+              <span class="result-icon">🎯</span>
+              <div class="result-content">
+                <span class="result-label">Doğruluk</span>
+                <span class="result-value" id="finalAccuracy">0</span>
+                <span class="result-unit">%</span>
+              </div>
+            </div>
+            <div class="result-item">
+              <span class="result-icon">✍️</span>
+              <div class="result-content">
+                <span class="result-label">Toplam Karakter</span>
+                <span class="result-value" id="totalChars">0</span>
+                <span class="result-unit">karakter</span>
+              </div>
+            </div>
+            <div class="result-item">
+              <span class="result-icon">❌</span>
+              <div class="result-content">
+                <span class="result-label">Hata Sayısı</span>
+                <span class="result-value" id="errorCount">0</span>
+                <span class="result-unit">hata</span>
+              </div>
+            </div>
+          </div>
+          <div class="result-actions">
+            <button class="btn btn-primary" id="tryAgainBtn">
+              🔄 Tekrar Dene
+            </button>
+            <button class="btn btn-secondary" id="backToMenuBtn">
+              🏠 Ana Menü
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- High Scores Section -->
+      <div class="highscores-section" id="highscoresSection">
+        <h2>🏆 En İyi Skorlar</h2>
+        <div class="highscores-tabs">
+          <button class="tab-btn active" data-level="easy">Kolay</button>
+          <button class="tab-btn" data-level="medium">Orta</button>
+          <button class="tab-btn" data-level="hard">Zor</button>
+        </div>
+        <div class="highscores-list" id="highscoresList">
+          <p class="no-scores">Henüz skor bulunmuyor. İlk skorunu kaydet!</p>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>
+          Created by
+          <a
+            href="https://serkanbayraktar.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Serkanby</a
+          >
+          |
+          <a
+            href="https://github.com/Serkanbyx"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
