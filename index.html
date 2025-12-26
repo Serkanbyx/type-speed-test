@@ -1,42 +1,150 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Type Speed Test - Yazma Hızı Testi</title>
+    <title>Type Speed Test - Test Your Typing Speed</title>
     <meta
       name="description"
-      content="Yazma hızınızı ve doğruluğunuzu test edin. WPM (words per minute) hesaplama ve detaylı istatistikler."
+      content="Test your typing speed and accuracy. WPM (words per minute) calculation and detailed statistics."
     />
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#6366f1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="TypeSpeed" />
+    <link rel="apple-touch-icon" href="icons/icon-192.png" />
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <!-- Header -->
       <header class="header">
-        <h1>⚡ Type Speed Test</h1>
-        <p class="subtitle">Yazma hızınızı ve doğruluğunuzu test edin</p>
+        <div class="header-top">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle theme"
+          >
+            <svg
+              class="icon icon-moon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            </svg>
+            <svg
+              class="icon icon-sun hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2" />
+              <path d="M12 20v2" />
+              <path d="m4.93 4.93 1.41 1.41" />
+              <path d="m17.66 17.66 1.41 1.41" />
+              <path d="M2 12h2" />
+              <path d="M20 12h2" />
+              <path d="m6.34 17.66-1.41 1.41" />
+              <path d="m19.07 4.93-1.41 1.41" />
+            </svg>
+          </button>
+          <button
+            class="sound-toggle"
+            id="soundToggle"
+            aria-label="Toggle sound"
+          >
+            <svg
+              class="icon icon-volume-on"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"
+              />
+              <path d="M16 9a5 5 0 0 1 0 6" />
+              <path d="M19.364 18.364a9 9 0 0 0 0-12.728" />
+            </svg>
+            <svg
+              class="icon icon-volume-off hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"
+              />
+              <line x1="22" x2="16" y1="9" y2="15" />
+              <line x1="16" x2="22" y1="9" y2="15" />
+            </svg>
+          </button>
+        </div>
+        <h1>Type Speed Test</h1>
+        <p class="subtitle">Test your typing speed and accuracy</p>
       </header>
 
       <!-- Difficulty Selection -->
       <div class="difficulty-section" id="difficultySection">
-        <h2>Zorluk Seviyesi Seçin</h2>
+        <h2>Select Difficulty Level</h2>
         <div class="difficulty-buttons">
           <button class="difficulty-btn" data-level="easy">
-            <span class="difficulty-icon">🟢</span>
-            <span class="difficulty-name">Kolay</span>
-            <span class="difficulty-desc">Kısa ve basit cümleler</span>
+            <span class="difficulty-indicator easy"></span>
+            <span class="difficulty-name">Easy</span>
+            <span class="difficulty-desc">Short and simple sentences</span>
           </button>
           <button class="difficulty-btn" data-level="medium">
-            <span class="difficulty-icon">🟡</span>
-            <span class="difficulty-name">Orta</span>
-            <span class="difficulty-desc">Normal uzunlukta metinler</span>
+            <span class="difficulty-indicator medium"></span>
+            <span class="difficulty-name">Medium</span>
+            <span class="difficulty-desc">Normal length texts</span>
           </button>
           <button class="difficulty-btn" data-level="hard">
-            <span class="difficulty-icon">🔴</span>
-            <span class="difficulty-name">Zor</span>
-            <span class="difficulty-desc">Uzun ve karmaşık cümleler</span>
+            <span class="difficulty-indicator hard"></span>
+            <span class="difficulty-name">Hard</span>
+            <span class="difficulty-desc">Long and complex sentences</span>
           </button>
+        </div>
+
+        <!-- Duration Selection -->
+        <div class="duration-section">
+          <h3>Select Duration</h3>
+          <div class="duration-buttons">
+            <button class="duration-btn" data-duration="30">30s</button>
+            <button class="duration-btn active" data-duration="60">60s</button>
+            <button class="duration-btn" data-duration="90">90s</button>
+            <button class="duration-btn" data-duration="120">120s</button>
+          </div>
         </div>
       </div>
 
@@ -45,7 +153,7 @@
         <!-- Stats Bar -->
         <div class="stats-bar">
           <div class="stat-item">
-            <span class="stat-label">Süre</span>
+            <span class="stat-label">Time</span>
             <span class="stat-value" id="timer">60</span>
           </div>
           <div class="stat-item">
@@ -53,7 +161,7 @@
             <span class="stat-value" id="wpm">0</span>
           </div>
           <div class="stat-item">
-            <span class="stat-label">Doğruluk</span>
+            <span class="stat-label">Accuracy</span>
             <span class="stat-value" id="accuracy">100%</span>
           </div>
         </div>
@@ -68,7 +176,7 @@
           <textarea
             id="textInput"
             class="text-input"
-            placeholder="Yazmaya başlamak için buraya tıklayın..."
+            placeholder="Click here to start typing..."
             autocomplete="off"
             autocorrect="off"
             autocapitalize="off"
@@ -79,10 +187,40 @@
         <!-- Action Buttons -->
         <div class="action-buttons">
           <button class="btn btn-secondary" id="restartBtn">
-            🔄 Yeniden Başla
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+              <path d="M3 3v5h5" />
+            </svg>
+            Restart
           </button>
           <button class="btn btn-secondary" id="changeLevelBtn">
-            📊 Seviye Değiştir
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M3 3v18h18" />
+              <path d="m19 9-5 5-4-4-3 3" />
+            </svg>
+            Change Level
           </button>
         </div>
       </div>
@@ -90,47 +228,144 @@
       <!-- Results Section -->
       <div class="results-section hidden" id="resultsSection">
         <div class="results-card">
-          <h2>🎉 Test Tamamlandı!</h2>
+          <h2>Test Completed!</h2>
           <div class="results-stats">
             <div class="result-item">
-              <span class="result-icon">⚡</span>
+              <div class="result-icon-wrapper">
+                <svg
+                  class="result-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
+              </div>
               <div class="result-content">
-                <span class="result-label">Yazma Hızı</span>
+                <span class="result-label">Typing Speed</span>
                 <span class="result-value" id="finalWpm">0</span>
                 <span class="result-unit">WPM</span>
               </div>
             </div>
             <div class="result-item">
-              <span class="result-icon">🎯</span>
+              <div class="result-icon-wrapper">
+                <svg
+                  class="result-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <circle cx="12" cy="12" r="6" />
+                  <circle cx="12" cy="12" r="2" />
+                </svg>
+              </div>
               <div class="result-content">
-                <span class="result-label">Doğruluk</span>
+                <span class="result-label">Accuracy</span>
                 <span class="result-value" id="finalAccuracy">0</span>
                 <span class="result-unit">%</span>
               </div>
             </div>
             <div class="result-item">
-              <span class="result-icon">✍️</span>
+              <div class="result-icon-wrapper">
+                <svg
+                  class="result-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 20h9" />
+                  <path
+                    d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"
+                  />
+                </svg>
+              </div>
               <div class="result-content">
-                <span class="result-label">Toplam Karakter</span>
+                <span class="result-label">Total Characters</span>
                 <span class="result-value" id="totalChars">0</span>
-                <span class="result-unit">karakter</span>
+                <span class="result-unit">chars</span>
               </div>
             </div>
             <div class="result-item">
-              <span class="result-icon">❌</span>
+              <div class="result-icon-wrapper error">
+                <svg
+                  class="result-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="m15 9-6 6" />
+                  <path d="m9 9 6 6" />
+                </svg>
+              </div>
               <div class="result-content">
-                <span class="result-label">Hata Sayısı</span>
+                <span class="result-label">Error Count</span>
                 <span class="result-value" id="errorCount">0</span>
-                <span class="result-unit">hata</span>
+                <span class="result-unit">errors</span>
               </div>
             </div>
           </div>
           <div class="result-actions">
             <button class="btn btn-primary" id="tryAgainBtn">
-              🔄 Tekrar Dene
+              <svg
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                <path d="M3 3v5h5" />
+              </svg>
+              Try Again
             </button>
             <button class="btn btn-secondary" id="backToMenuBtn">
-              🏠 Ana Menü
+              <svg
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+              Main Menu
             </button>
           </div>
         </div>
@@ -138,14 +373,39 @@
 
       <!-- High Scores Section -->
       <div class="highscores-section" id="highscoresSection">
-        <h2>🏆 En İyi Skorlar</h2>
+        <h2>
+          <svg
+            class="icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+            <path d="M4 22h16" />
+            <path
+              d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"
+            />
+            <path
+              d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"
+            />
+            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+          </svg>
+          High Scores
+        </h2>
         <div class="highscores-tabs">
-          <button class="tab-btn active" data-level="easy">Kolay</button>
-          <button class="tab-btn" data-level="medium">Orta</button>
-          <button class="tab-btn" data-level="hard">Zor</button>
+          <button class="tab-btn active" data-level="easy">Easy</button>
+          <button class="tab-btn" data-level="medium">Medium</button>
+          <button class="tab-btn" data-level="hard">Hard</button>
         </div>
         <div class="highscores-list" id="highscoresList">
-          <p class="no-scores">Henüz skor bulunmuyor. İlk skorunu kaydet!</p>
+          <p class="no-scores">No scores yet. Save your first score!</p>
         </div>
       </div>
 
@@ -170,6 +430,8 @@
       </footer>
     </div>
 
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

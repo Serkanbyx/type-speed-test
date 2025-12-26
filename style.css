@@ -1,4 +1,4 @@
-/* ==================== ROOT VARIABLES ==================== */
+/* ==================== ROOT VARIABLES - DARK THEME (DEFAULT) ==================== */
 :root {
     --primary-color: #6366f1;
     --primary-hover: #4f46e5;
@@ -26,6 +26,28 @@
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ==================== LIGHT THEME ==================== */
+[data-theme="light"] {
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --secondary-color: #7c3aed;
+    --success-color: #059669;
+    --error-color: #dc2626;
+    --warning-color: #d97706;
+    
+    --bg-color: #f8fafc;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #e2e8f0;
+    
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
 /* ==================== GLOBAL STYLES ==================== */
 * {
     margin: 0;
@@ -35,12 +57,22 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background: var(--bg-color);
     color: var(--text-primary);
     line-height: 1.6;
     min-height: 100vh;
     padding: 20px;
     overflow-x: hidden;
+    transition: var(--transition);
+}
+
+[data-theme="dark"] body,
+body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+[data-theme="light"] body {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
 }
 
 /* ==================== CONTAINER ==================== */
@@ -66,7 +98,74 @@ body {
     text-align: center;
     margin-bottom: 40px;
     padding: 20px;
+    position: relative;
 }
+
+.header-top {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.theme-toggle,
+.sound-toggle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid var(--bg-tertiary);
+    background: var(--bg-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    color: var(--text-primary);
+}
+
+.theme-toggle:hover,
+.sound-toggle:hover {
+    transform: scale(1.1);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.sound-toggle.muted {
+    opacity: 0.5;
+}
+
+/* ==================== SVG ICONS ==================== */
+.icon {
+    flex-shrink: 0;
+}
+
+.icon.hidden {
+    display: none;
+}
+
+.result-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(99, 102, 241, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.result-icon-wrapper.error {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--error-color);
+}
+
+.result-icon {
+    width: 28px;
+    height: 28px;
+}
+
 
 .header h1 {
     font-size: 3rem;
@@ -139,8 +238,26 @@ body {
     box-shadow: var(--shadow-lg);
 }
 
-.difficulty-icon {
-    font-size: 3rem;
+.difficulty-indicator {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+}
+
+.difficulty-indicator.easy {
+    background: var(--success-color);
+    box-shadow: 0 0 12px var(--success-color);
+}
+
+.difficulty-indicator.medium {
+    background: var(--warning-color);
+    box-shadow: 0 0 12px var(--warning-color);
+}
+
+.difficulty-indicator.hard {
+    background: var(--error-color);
+    box-shadow: 0 0 12px var(--error-color);
 }
 
 .difficulty-name {
@@ -151,6 +268,52 @@ body {
 .difficulty-desc {
     font-size: 0.9rem;
     color: var(--text-muted);
+}
+
+/* ==================== DURATION SECTION ==================== */
+.duration-section {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid var(--bg-tertiary);
+}
+
+.duration-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.duration-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.duration-btn {
+    padding: 12px 24px;
+    background: var(--bg-tertiary);
+    border: 2px solid transparent;
+    border-radius: var(--border-radius-sm);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    min-width: 70px;
+}
+
+.duration-btn:hover {
+    background: var(--bg-secondary);
+    border-color: var(--primary-color);
+}
+
+.duration-btn.active {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: rgba(99, 102, 241, 0.1);
 }
 
 /* ==================== GAME SECTION ==================== */
@@ -334,9 +497,6 @@ body {
     gap: 10px;
 }
 
-.result-icon {
-    font-size: 2.5rem;
-}
 
 .result-content {
     display: flex;
@@ -383,6 +543,14 @@ body {
     margin-bottom: 20px;
     font-size: 1.8rem;
     color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.highscores-section h2 .icon {
+    color: var(--warning-color);
 }
 
 .highscores-tabs {
@@ -514,6 +682,12 @@ body {
         font-size: 2rem;
     }
     
+    .header-top {
+        position: static;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
     .subtitle {
         font-size: 1rem;
     }
@@ -550,6 +724,15 @@ body {
     .btn {
         width: 100%;
     }
+    
+    .duration-buttons {
+        gap: 10px;
+    }
+    
+    .duration-btn {
+        padding: 10px 18px;
+        min-width: 60px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -577,8 +760,9 @@ body {
     }
     
     .action-buttons,
-    .footer {
+    .footer,
+    .theme-toggle,
+    .sound-toggle {
         display: none;
     }
 }
-

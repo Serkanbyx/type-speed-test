@@ -1,40 +1,40 @@
 // ==================== TEXT COLLECTIONS ====================
 const textCollections = {
     easy: [
-        "Güneş bugün çok güzel parlıyor.",
-        "Sabah kahvaltısı çok önemlidir.",
-        "Kitap okumak güzel bir alışkanlıktır.",
-        "Müzik dinlemek ruhu rahatlatır.",
-        "Spor yapmak sağlığa faydalıdır.",
-        "Su içmek vücut için önemlidir.",
-        "Arkadaşlarla vakit geçirmek keyiflidir.",
-        "Yürüyüş yapmak iyi gelir.",
-        "Çiçekler bahçeyi güzelleştirir.",
-        "Gülümsemek insanı mutlu eder."
+        "The sun is shining beautifully today.",
+        "Breakfast is an important meal.",
+        "Reading books is a great habit.",
+        "Listening to music relaxes the soul.",
+        "Exercise is beneficial for health.",
+        "Drinking water is important for the body.",
+        "Spending time with friends is enjoyable.",
+        "Taking a walk is good for you.",
+        "Flowers make the garden beautiful.",
+        "Smiling makes people happy."
     ],
     medium: [
-        "Teknoloji hayatımızı her geçen gün daha fazla etkiliyor ve değiştiriyor.",
-        "Düzenli uyku uyumak hem fiziksel hem de zihinsel sağlık için çok önemlidir.",
-        "Programlama öğrenmek sabır ve sürekli pratik gerektiren bir süreçtir.",
-        "İyi bir kitap okumak insanı farklı dünyalara götürebilir ve hayal gücünü geliştirir.",
-        "Sağlıklı beslenme ve düzenli egzersiz yaşam kalitesini önemli ölçüde artırır.",
-        "İletişim becerileri geliştirmek kişisel ve profesyonel hayatta başarının anahtarıdır.",
-        "Zaman yönetimi becerisi kazanmak verimliliği artırır ve stresi azaltır.",
-        "Yeni bir dil öğrenmek beyin gelişimine katkı sağlar ve farklı kültürleri anlamaya yardımcı olur.",
-        "Pozitif düşünmek ve iyimser olmak hayatın zorluklarıyla başa çıkmayı kolaylaştırır.",
-        "Meditasyon ve nefes egzersizleri zihinsel sağlığı korumak için etkili yöntemlerdir."
+        "Technology is affecting and changing our lives more and more every day.",
+        "Getting regular sleep is very important for both physical and mental health.",
+        "Learning programming is a process that requires patience and consistent practice.",
+        "Reading a good book can take you to different worlds and develop your imagination.",
+        "Healthy eating and regular exercise significantly improve quality of life.",
+        "Developing communication skills is the key to success in personal and professional life.",
+        "Gaining time management skills increases productivity and reduces stress.",
+        "Learning a new language contributes to brain development and helps understand different cultures.",
+        "Thinking positively and being optimistic makes it easier to cope with life's challenges.",
+        "Meditation and breathing exercises are effective methods for maintaining mental health."
     ],
     hard: [
-        "Yapay zeka ve makine öğrenimi teknolojileri, endüstrileri dönüştürüyor ve iş yapış şekillerimizi köklü bir biçimde değiştirerek yeni fırsatlar yaratırken bazı zorlukları da beraberinde getiriyor.",
-        "Sürdürülebilir kalkınma hedefleri, çevresel, ekonomik ve sosyal boyutları bir araya getirerek gelecek nesillerin ihtiyaçlarını karşılayabilmelerini sağlamayı amaçlayan kapsamlı bir çerçeve sunmaktadır.",
-        "Kuantum bilgisayarlar, klasik bilgisayarların çözemeyeceği karmaşık problemleri çözme potansiyeline sahip olup, kriptografi, ilaç geliştirme ve yapay zeka alanlarında devrim yaratması beklenmektedir.",
-        "İklim değişikliği, küresel ısınma, biyoçeşitlilik kaybı ve doğal kaynakların tükenmesi gibi çevresel sorunlar, insanlığın karşı karşıya olduğu en acil ve kritik meseleler arasında yer almaktadır.",
-        "Nörobilim ve psikoloji alanındaki ilerlemeler, insan beyninin karmaşık yapısını ve bilinç fenomenini anlamamıza yardımcı olurken, yapay zeka ile insan zekası arasındaki ilişkiyi yeniden düşünmemizi sağlamaktadır.",
-        "Blockchain teknolojisi ve merkezi olmayan sistemler, geleneksel finansal yapıları dönüştürme potansiyeline sahip olup, güvenlik, şeffaflık ve veri bütünlüğü konularında yeni paradigmalar oluşturmaktadır.",
-        "Genetik mühendisliği ve CRISPR teknolojisi, hastalıkların tedavisinde ve tarımsal verimliliğin artırılmasında büyük umut vaat etmekle birlikte, etik ve güvenlik konularında ciddi tartışmaları da beraberinde getirmektedir.",
-        "Uzay araştırmaları ve kolonizasyon projeleri, insanlığın çok gezegenli bir tür haline gelmesi vizyonunu gerçekleştirmeyi hedeflerken, teknolojik, ekonomik ve etik açıdan pek çok soruyu da gündeme getirmektedir.",
-        "Dijital dönüşüm süreçleri, işletmelerin operasyonel verimliliğini artırırken, çalışanların beceri setlerini yeniden tanımlamayı ve sürekli öğrenme kültürünü benimsemeyi zorunlu kılmaktadır.",
-        "Nörolinguistik programlama ve bilişsel davranışçı terapi gibi yaklaşımlar, kişisel gelişim ve zihinsel sağlık alanlarında bireylerin düşünce kalıplarını değiştirmelerine ve daha etkili başa çıkma stratejileri geliştirmelerine yardımcı olmaktadır."
+        "Artificial intelligence and machine learning technologies are transforming industries and fundamentally changing the way we work, creating new opportunities while also bringing some challenges.",
+        "Sustainable development goals provide a comprehensive framework that brings together environmental, economic, and social dimensions, aiming to ensure that future generations can meet their needs.",
+        "Quantum computers have the potential to solve complex problems that classical computers cannot, and are expected to revolutionize fields such as cryptography, drug development, and artificial intelligence.",
+        "Environmental issues such as climate change, global warming, biodiversity loss, and depletion of natural resources are among the most urgent and critical challenges facing humanity.",
+        "Advances in neuroscience and psychology help us understand the complex structure of the human brain and the phenomenon of consciousness, while also making us rethink the relationship between AI and human intelligence.",
+        "Blockchain technology and decentralized systems have the potential to transform traditional financial structures, creating new paradigms in security, transparency, and data integrity.",
+        "Genetic engineering and CRISPR technology hold great promise for treating diseases and increasing agricultural productivity, while also raising serious ethical and safety debates.",
+        "Space exploration and colonization projects aim to realize the vision of humanity becoming a multi-planetary species, while also raising many technological, economic, and ethical questions.",
+        "Digital transformation processes increase the operational efficiency of businesses while requiring employees to redefine their skill sets and embrace a culture of continuous learning.",
+        "Approaches such as neurolinguistic programming and cognitive behavioral therapy help individuals change their thought patterns and develop more effective coping strategies in personal development and mental health."
     ]
 };
 
@@ -46,12 +46,22 @@ let gameState = {
     endTime: null,
     timerInterval: null,
     timeLeft: 60,
+    selectedDuration: 60,
     isGameActive: false,
     typedChars: 0,
     correctChars: 0,
     incorrectChars: 0,
     currentIndex: 0
 };
+
+// ==================== APP SETTINGS ====================
+let appSettings = {
+    theme: 'dark',
+    soundEnabled: true
+};
+
+// ==================== AUDIO CONTEXT ====================
+let audioContext = null;
 
 // ==================== DOM ELEMENTS ====================
 const difficultySection = document.getElementById('difficultySection');
@@ -60,11 +70,15 @@ const resultsSection = document.getElementById('resultsSection');
 const highscoresSection = document.getElementById('highscoresSection');
 
 const difficultyButtons = document.querySelectorAll('.difficulty-btn');
+const durationButtons = document.querySelectorAll('.duration-btn');
 const textDisplay = document.getElementById('textDisplay');
 const textInput = document.getElementById('textInput');
 const timerElement = document.getElementById('timer');
 const wpmElement = document.getElementById('wpm');
 const accuracyElement = document.getElementById('accuracy');
+
+const themeToggle = document.getElementById('themeToggle');
+const soundToggle = document.getElementById('soundToggle');
 
 const restartBtn = document.getElementById('restartBtn');
 const changeLevelBtn = document.getElementById('changeLevelBtn');
@@ -81,17 +95,236 @@ const highscoresList = document.getElementById('highscoresList');
 
 // ==================== INITIALIZE APP ====================
 function initApp() {
+    loadSettings();
+    applyTheme();
+    updateSoundIcon();
     setupEventListeners();
     loadAndDisplayHighscores('easy');
+    registerServiceWorker();
+}
+
+// ==================== SERVICE WORKER REGISTRATION ====================
+function registerServiceWorker() {
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then((registration) => {
+                    console.log('ServiceWorker registered:', registration.scope);
+                })
+                .catch((error) => {
+                    console.log('ServiceWorker registration failed:', error);
+                });
+        });
+    }
+}
+
+// ==================== THEME MANAGEMENT ====================
+function loadSettings() {
+    const savedTheme = localStorage.getItem('typeSpeedTheme');
+    const savedSound = localStorage.getItem('typeSpeedSound');
+    
+    if (savedTheme) {
+        appSettings.theme = savedTheme;
+    }
+    
+    if (savedSound !== null) {
+        appSettings.soundEnabled = savedSound === 'true';
+    }
+}
+
+function saveSettings() {
+    localStorage.setItem('typeSpeedTheme', appSettings.theme);
+    localStorage.setItem('typeSpeedSound', String(appSettings.soundEnabled));
+}
+
+function applyTheme() {
+    document.documentElement.setAttribute('data-theme', appSettings.theme);
+    const moonIcon = themeToggle.querySelector('.icon-moon');
+    const sunIcon = themeToggle.querySelector('.icon-sun');
+    
+    if (appSettings.theme === 'dark') {
+        moonIcon.classList.remove('hidden');
+        sunIcon.classList.add('hidden');
+    } else {
+        moonIcon.classList.add('hidden');
+        sunIcon.classList.remove('hidden');
+    }
+}
+
+function toggleTheme() {
+    appSettings.theme = appSettings.theme === 'dark' ? 'light' : 'dark';
+    applyTheme();
+    saveSettings();
+    playSound('click');
+}
+
+// ==================== SOUND MANAGEMENT ====================
+function initAudioContext() {
+    if (!audioContext) {
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    return audioContext;
+}
+
+function updateSoundIcon() {
+    const volumeOn = soundToggle.querySelector('.icon-volume-on');
+    const volumeOff = soundToggle.querySelector('.icon-volume-off');
+    
+    if (appSettings.soundEnabled) {
+        volumeOn.classList.remove('hidden');
+        volumeOff.classList.add('hidden');
+    } else {
+        volumeOn.classList.add('hidden');
+        volumeOff.classList.remove('hidden');
+    }
+    soundToggle.classList.toggle('muted', !appSettings.soundEnabled);
+}
+
+function toggleSound() {
+    appSettings.soundEnabled = !appSettings.soundEnabled;
+    updateSoundIcon();
+    saveSettings();
+    
+    if (appSettings.soundEnabled) {
+        playSound('click');
+    }
+}
+
+function playSound(type) {
+    if (!appSettings.soundEnabled) return;
+    
+    try {
+        const ctx = initAudioContext();
+        const oscillator = ctx.createOscillator();
+        const gainNode = ctx.createGain();
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(ctx.destination);
+        
+        switch (type) {
+            case 'keypress':
+                oscillator.frequency.value = 800;
+                gainNode.gain.value = 0.05;
+                oscillator.type = 'sine';
+                oscillator.start();
+                oscillator.stop(ctx.currentTime + 0.05);
+                break;
+                
+            case 'error':
+                oscillator.frequency.value = 200;
+                gainNode.gain.value = 0.1;
+                oscillator.type = 'square';
+                oscillator.start();
+                oscillator.stop(ctx.currentTime + 0.1);
+                break;
+                
+            case 'success':
+                oscillator.frequency.value = 523.25; // C5
+                gainNode.gain.value = 0.1;
+                oscillator.type = 'sine';
+                oscillator.start();
+                
+                setTimeout(() => {
+                    const osc2 = ctx.createOscillator();
+                    const gain2 = ctx.createGain();
+                    osc2.connect(gain2);
+                    gain2.connect(ctx.destination);
+                    osc2.frequency.value = 659.25; // E5
+                    gain2.gain.value = 0.1;
+                    osc2.type = 'sine';
+                    osc2.start();
+                    osc2.stop(ctx.currentTime + 0.15);
+                }, 100);
+                
+                setTimeout(() => {
+                    const osc3 = ctx.createOscillator();
+                    const gain3 = ctx.createGain();
+                    osc3.connect(gain3);
+                    gain3.connect(ctx.destination);
+                    osc3.frequency.value = 783.99; // G5
+                    gain3.gain.value = 0.1;
+                    osc3.type = 'sine';
+                    osc3.start();
+                    osc3.stop(ctx.currentTime + 0.2);
+                }, 200);
+                
+                oscillator.stop(ctx.currentTime + 0.15);
+                break;
+                
+            case 'click':
+                oscillator.frequency.value = 600;
+                gainNode.gain.value = 0.05;
+                oscillator.type = 'sine';
+                oscillator.start();
+                oscillator.stop(ctx.currentTime + 0.05);
+                break;
+                
+            default:
+                oscillator.frequency.value = 440;
+                gainNode.gain.value = 0.05;
+                oscillator.start();
+                oscillator.stop(ctx.currentTime + 0.05);
+        }
+    } catch (e) {
+        console.log('Audio not supported:', e);
+    }
+}
+
+// ==================== CONFETTI ====================
+function triggerConfetti() {
+    if (typeof confetti === 'undefined') return;
+    
+    // First burst
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+    });
+    
+    // Left side
+    setTimeout(() => {
+        confetti({
+            particleCount: 50,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0 }
+        });
+    }, 200);
+    
+    // Right side
+    setTimeout(() => {
+        confetti({
+            particleCount: 50,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1 }
+        });
+    }, 400);
 }
 
 // ==================== EVENT LISTENERS ====================
 function setupEventListeners() {
+    // Theme toggle
+    themeToggle.addEventListener('click', toggleTheme);
+    
+    // Sound toggle
+    soundToggle.addEventListener('click', toggleSound);
+    
     // Difficulty selection
     difficultyButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             const level = btn.getAttribute('data-level');
+            playSound('click');
             startGame(level);
+        });
+    });
+    
+    // Duration selection
+    durationButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const duration = parseInt(btn.getAttribute('data-duration'));
+            selectDuration(duration);
+            playSound('click');
         });
     });
 
@@ -100,17 +333,42 @@ function setupEventListeners() {
     textInput.addEventListener('paste', (e) => e.preventDefault());
 
     // Action buttons
-    restartBtn.addEventListener('click', () => restartGame());
-    changeLevelBtn.addEventListener('click', () => backToMenu());
-    tryAgainBtn.addEventListener('click', () => startGame(gameState.currentLevel));
-    backToMenuBtn.addEventListener('click', () => backToMenu());
+    restartBtn.addEventListener('click', () => {
+        playSound('click');
+        restartGame();
+    });
+    changeLevelBtn.addEventListener('click', () => {
+        playSound('click');
+        backToMenu();
+    });
+    tryAgainBtn.addEventListener('click', () => {
+        playSound('click');
+        startGame(gameState.currentLevel);
+    });
+    backToMenuBtn.addEventListener('click', () => {
+        playSound('click');
+        backToMenu();
+    });
 
     // Highscore tabs
     tabButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             const level = btn.getAttribute('data-level');
+            playSound('click');
             switchHighscoreTab(level);
         });
+    });
+}
+
+// ==================== DURATION SELECTION ====================
+function selectDuration(duration) {
+    gameState.selectedDuration = duration;
+    
+    durationButtons.forEach(btn => {
+        btn.classList.remove('active');
+        if (parseInt(btn.getAttribute('data-duration')) === duration) {
+            btn.classList.add('active');
+        }
     });
 }
 
@@ -118,6 +376,7 @@ function setupEventListeners() {
 function startGame(level) {
     gameState.currentLevel = level;
     gameState.currentText = getRandomText(level);
+    gameState.timeLeft = gameState.selectedDuration;
     resetGameState();
     
     difficultySection.classList.add('hidden');
@@ -133,7 +392,6 @@ function startGame(level) {
 function resetGameState() {
     gameState.startTime = null;
     gameState.endTime = null;
-    gameState.timeLeft = 60;
     gameState.isGameActive = false;
     gameState.typedChars = 0;
     gameState.correctChars = 0;
@@ -173,6 +431,10 @@ function endGame() {
     calculateFinalStats();
     saveScore();
     showResults();
+    
+    // Play success sound and trigger confetti
+    playSound('success');
+    triggerConfetti();
 }
 
 // ==================== TEXT HANDLING ====================
@@ -194,6 +456,8 @@ function renderText() {
 }
 
 // ==================== INPUT HANDLING ====================
+let lastInputLength = 0;
+
 function handleInput(e) {
     if (!gameState.isGameActive) {
         startTimer();
@@ -216,6 +480,7 @@ function handleInput(e) {
     // Mark typed characters
     let correctCount = 0;
     let incorrectCount = 0;
+    let hasNewError = false;
     
     for (let i = 0; i < inputLength; i++) {
         if (i < gameState.currentText.length) {
@@ -225,9 +490,24 @@ function handleInput(e) {
             } else {
                 chars[i].classList.add('incorrect');
                 incorrectCount++;
+                // Check if this is a new error
+                if (i === inputLength - 1 && inputLength > lastInputLength) {
+                    hasNewError = true;
+                }
             }
         }
     }
+    
+    // Play sound based on last character
+    if (inputLength > lastInputLength) {
+        if (hasNewError) {
+            playSound('error');
+        } else {
+            playSound('keypress');
+        }
+    }
+    
+    lastInputLength = inputLength;
     
     // Mark current character
     if (inputLength < gameState.currentText.length) {
@@ -247,6 +527,8 @@ function handleInput(e) {
 
 // ==================== TIMER ====================
 function startTimer() {
+    timerElement.textContent = gameState.timeLeft;
+    
     gameState.timerInterval = setInterval(() => {
         gameState.timeLeft--;
         timerElement.textContent = gameState.timeLeft;
@@ -281,7 +563,7 @@ function updateStats() {
 function calculateFinalStats() {
     const elapsedMinutes = (gameState.endTime - gameState.startTime) / 60000;
     const wordsTyped = gameState.correctChars / 5;
-    const finalWpmValue = Math.round(wordsTyped / elapsedMinutes);
+    const finalWpmValue = elapsedMinutes > 0 ? Math.round(wordsTyped / elapsedMinutes) : 0;
     
     const totalTyped = gameState.typedChars;
     const accuracyValue = totalTyped > 0 
@@ -311,6 +593,7 @@ function saveScore() {
         correctChars: gameState.correctChars,
         incorrectChars: gameState.incorrectChars,
         level: gameState.currentLevel,
+        duration: gameState.selectedDuration,
         date: new Date().toISOString(),
         timestamp: Date.now()
     };
@@ -370,7 +653,7 @@ function loadAndDisplayHighscores(level) {
 
 function displayHighscores(scores) {
     if (scores.length === 0) {
-        highscoresList.innerHTML = '<p class="no-scores">Henüz skor bulunmuyor. İlk skorunu kaydet!</p>';
+        highscoresList.innerHTML = '<p class="no-scores">No scores yet. Save your first score!</p>';
         return;
     }
     
@@ -381,7 +664,7 @@ function displayHighscores(scores) {
         scoreItem.classList.add('score-item');
         
         const date = new Date(score.date);
-        const formattedDate = date.toLocaleDateString('tr-TR', {
+        const formattedDate = date.toLocaleDateString('en-US', {
             day: '2-digit',
             month: '2-digit',
             year: 'numeric'
@@ -395,15 +678,15 @@ function displayHighscores(scores) {
                     <span class="score-detail-value">${score.wpm}</span>
                 </div>
                 <div class="score-detail">
-                    <span class="score-detail-label">Doğruluk</span>
+                    <span class="score-detail-label">Accuracy</span>
                     <span class="score-detail-value">${score.accuracy}%</span>
                 </div>
                 <div class="score-detail">
-                    <span class="score-detail-label">Doğru</span>
+                    <span class="score-detail-label">Correct</span>
                     <span class="score-detail-value">${score.correctChars}</span>
                 </div>
                 <div class="score-detail">
-                    <span class="score-detail-label">Hata</span>
+                    <span class="score-detail-label">Errors</span>
                     <span class="score-detail-value">${score.incorrectChars}</span>
                 </div>
             </div>
@@ -429,4 +712,3 @@ function switchHighscoreTab(level) {
 
 // ==================== INITIALIZE APP ON LOAD ====================
 document.addEventListener('DOMContentLoaded', initApp);
-
