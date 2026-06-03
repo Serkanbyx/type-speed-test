@@ -1,9 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Security Vulnerability
-    url: https://github.com/Serkanbyx/s1.3_Type-Speed-Test/blob/main/SECURITY.md
-    about: Please report security vulnerabilities through our security policy
+    url: https://github.com/serkanbyx/type-speed-test/security/policy
+    about: Please report security vulnerabilities privately via our security policy (see SECURITY.md)
   - name: Questions & Discussions
-    url: https://github.com/Serkanbyx/s1.3_Type-Speed-Test/discussions
+    url: https://github.com/serkanbyx/type-speed-test/discussions
     about: Ask questions and discuss ideas in GitHub Discussions
-

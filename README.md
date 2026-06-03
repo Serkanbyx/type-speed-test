@@ -20,7 +20,7 @@ A modern, user-friendly typing speed test application. Measure your typing speed
 
 ## Live Demo
 
-[🎮 View Live Demo](https://serkanbyx.github.io/s1.3_Type-Speed-Test/)
+[🎮 View Live Demo](https://serkanbyx.github.io/type-speed-test/)
 
 ## Technologies
 
@@ -39,13 +39,13 @@ A modern, user-friendly typing speed test application. Measure your typing speed
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Serkanbyx/s1.3_Type-Speed-Test.git
+git clone https://github.com/Serkanbyx/type-speed-test.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-cd s1.3_Type-Speed-Test
+cd type-speed-test
 ```
 
 3. Open with a local server:
@@ -239,7 +239,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Have questions or suggestions? Feel free to reach out!
 
-- 🐛 [Open an Issue](https://github.com/Serkanbyx/s1.3_Type-Speed-Test/issues)
+- 🐛 [Open an Issue](https://github.com/Serkanbyx/type-speed-test/issues)
 - 📧 Email: [serkanbyx1@gmail.com](mailto:serkanbyx1@gmail.com)
 - 🌐 Website: [serkanbayraktar.com](https://serkanbayraktar.com/)
 
