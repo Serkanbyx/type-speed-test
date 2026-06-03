@@ -1,11 +1,12 @@
 // ==================== SERVICE WORKER ====================
-const CACHE_NAME = 'type-speed-test-v1';
+const CACHE_NAME = 'type-speed-test-v2';
 const ASSETS_TO_CACHE = [
-    '/',
-    '/index.html',
-    '/style.css',
-    '/script.js',
-    '/manifest.json'
+    './',
+    './index.html',
+    './style.css',
+    './script.js',
+    './manifest.json',
+    './icons/icon.svg'
 ];
 
 // Install event - cache assets
@@ -60,7 +61,7 @@ self.addEventListener('fetch', (event) => {
             })
             .catch(() => {
                 // Return offline fallback if available
-                return caches.match('/index.html');
+                return caches.match('./index.html');
             })
     );
 });

@@ -107,7 +107,7 @@ function initApp() {
 function registerServiceWorker() {
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/service-worker.js')
+            navigator.serviceWorker.register('./service-worker.js')
                 .then((registration) => {
                     console.log('ServiceWorker registered:', registration.scope);
                 })
@@ -519,8 +519,8 @@ function handleInput(e) {
     
     updateStats();
     
-    // Check if text is completed
-    if (inputLength === gameState.currentText.length && incorrectCount === 0) {
+    // End the game once the entire text has been typed, regardless of errors
+    if (inputLength >= gameState.currentText.length) {
         endGame();
     }
 }
@@ -531,7 +531,7 @@ function startTimer() {
     
     gameState.timerInterval = setInterval(() => {
         gameState.timeLeft--;
-        timerElement.textContent = gameState.timeLeft;
+        updateStats();
         
         if (gameState.timeLeft <= 0) {
             endGame();

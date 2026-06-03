@@ -17,7 +17,15 @@
       content="black-translucent"
     />
     <meta name="apple-mobile-web-app-title" content="TypeSpeed" />
-    <link rel="apple-touch-icon" href="icons/icon-192.png" />
+    <link rel="icon" type="image/svg+xml" href="icons/icon.svg" />
+    <link rel="apple-touch-icon" href="icons/icon.svg" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <!-- Styles -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -154,15 +162,17 @@
         <div class="stats-bar">
           <div class="stat-item">
             <span class="stat-label">Time</span>
-            <span class="stat-value" id="timer">60</span>
+            <span class="stat-value" id="timer" aria-live="polite">60</span>
           </div>
           <div class="stat-item">
             <span class="stat-label">WPM</span>
-            <span class="stat-value" id="wpm">0</span>
+            <span class="stat-value" id="wpm" aria-live="polite">0</span>
           </div>
           <div class="stat-item">
             <span class="stat-label">Accuracy</span>
-            <span class="stat-value" id="accuracy">100%</span>
+            <span class="stat-value" id="accuracy" aria-live="polite"
+              >100%</span
+            >
           </div>
         </div>
 
@@ -173,6 +183,9 @@
 
         <!-- Input Area -->
         <div class="input-section">
+          <label for="textInput" class="visually-hidden"
+            >Type the displayed text here</label
+          >
           <textarea
             id="textInput"
             class="text-input"
