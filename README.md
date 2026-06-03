@@ -183,7 +183,7 @@ case 'keypress':
 
 ## Contributing
 
-Contributions are welcome! Please follow these steps:
+Contributions are welcome! Please read our [Contributing Guide](.github/CONTRIBUTING.md) and [Code of Conduct](.github/CODE_OF_CONDUCT.md) before getting started. Found a security issue? Please review our [Security Policy](.github/SECURITY.md).
 
 1. **Fork** the repository
 2. **Create** your feature branch:
