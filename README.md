@@ -22,6 +22,8 @@ A modern, user-friendly typing speed test application. Measure your typing speed
 
 [🎮 View Live Demo](https://serkanbyx.github.io/type-speed-test/)
 
+> Want to understand how this project was built step by step? See the [Build Guide](docs/build-guide.md).
+
 ## Technologies
 
 - **HTML5**: Semantic and accessible markup structure
